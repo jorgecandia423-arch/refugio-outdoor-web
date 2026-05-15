@@ -20,7 +20,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
       message += `${index + 1}. ${item.name} (${item.brand})\n`;
       message += `   Talla: ${item.size} | Estado: ${item.status}\n`;
       message += `   Precio: Bs. ${item.price}\n`;
-      message += `   Imagen: ${item.image}\n\n`;
+      message += `   Enlace: https://refugio-outdoor-web.vercel.app/producto/${item.id}\n\n`;
     });
     message += `Total a pagar: Bs. ${getTotal()}`;
 
