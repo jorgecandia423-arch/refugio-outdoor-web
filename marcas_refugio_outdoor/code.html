@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#727973",
+                    "primary-fixed": "#ccead6",
+                    "tertiary-fixed": "#ffdcc2",
+                    "secondary-fixed": "#f0e0ca",
+                    "surface-dim": "#dcd9d9",
+                    "surface-variant": "#e5e2e1",
+                    "on-tertiary-fixed": "#2b1705",
+                    "tertiary": "#3d2713",
+                    "on-tertiary-fixed-variant": "#5b412c",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#eddec7",
+                    "secondary": "#685d4b",
+                    "on-surface-variant": "#424844",
+                    "surface-tint": "#496455",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c2c8c2",
+                    "primary-container": "#2d4739",
+                    "on-primary-container": "#98b5a3",
+                    "on-background": "#1b1c1c",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#563c27",
+                    "inverse-primary": "#b0cdbb",
+                    "soft-white": "#FDFDFD",
+                    "on-tertiary": "#ffffff",
+                    "kraft-beige": "#F5EFE6",
+                    "primary": "#173124",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-container": "#cba78c",
+                    "inverse-surface": "#303030",
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#e5bfa3",
+                    "on-surface": "#1b1c1c",
+                    "background": "#fcf9f8",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#b0cdbb",
+                    "on-secondary-fixed": "#221a0c",
+                    "on-secondary-container": "#6c614f",
+                    "burnt-orange": "#D1603D",
+                    "surface-container-high": "#eae7e7",
+                    "on-primary-fixed-variant": "#324c3e",
+                    "on-primary-fixed": "#062014",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2e1",
+                    "secondary-fixed-dim": "#d3c4af",
+                    "surface-container": "#f0eded",
+                    "on-secondary-fixed-variant": "#4f4535",
+                    "inverse-on-surface": "#f3f0ef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Literata"],
+                    "label-bold": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "headline-md": ["Literata"],
+                    "body-md": ["Montserrat"],
+                    "headline-sm": ["Literata"],
+                    "display-lg-mobile": ["Literata"],
+                    "body-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1b1c1c;
+        }
+    </style>
+</head>
+<body class="bg-background">
+<!-- TopNavBar -->
+<nav class="bg-kraft-beige/90 backdrop-blur-md dark:bg-primary/95 docked full-width top-0 sticky z-50 border-b border-outline-variant/30 flat no shadows">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-display-lg text-headline-sm text-primary dark:text-primary-fixed tracking-tight">Refugio Outdoor</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 hover:text-burnt-orange transition-all duration-300" href="#">Lo Nuevo</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 hover:text-burnt-orange transition-all duration-300" href="#">Tienda</a>
+<a class="font-label-bold text-label-bold uppercase text-burnt-orange border-b-2 border-burnt-orange pb-1 hover:text-burnt-orange transition-all duration-300" href="#">Marcas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 hover:text-burnt-orange transition-all duration-300" href="#">Showroom</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200 hover:text-burnt-orange transition-all duration-300" href="#">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed-dim Active: opacity-80 scale-95 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Editorial Header & Value Proposition -->
+<section class="py-20 bg-soft-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-7">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Nuestra Curaduría: <br/>Marcas con Legado</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Seleccionamos cada pieza basándonos en su capacidad para resistir el tiempo y el clima. No solo vendemos equipo; entregamos herramientas probadas para la aventura.
+                        </p>
+</div>
+<div class="md:col-span-5 bg-kraft-beige p-8 border-l-4 border-burnt-orange">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-burnt-orange" style="font-variation-settings: 'FILL' 1;">verified</span>
+<h3 class="font-label-bold text-label-bold uppercase text-primary">El Arte del "Fishing"</h3>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+                            Nuestro equipo recorre mercados y colecciones privadas, "pescando" las piezas más icónicas. Cada chaqueta, bota o mochila es sometida a una revisión técnica exhaustiva para garantizar su autenticidad y estado premium antes de llegar a nuestro showroom.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Blocks - Asymmetric Layout -->
+<section class="py-20 space-y-32">
+<!-- Patagonia -->
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 relative group overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-700" data-alt="A professional close-up shot of a classic Patagonia Synchilla fleece jacket worn by a person standing in a misty, pine-covered mountain forest. The lighting is soft and moody, emphasizing the rich texture of the recycled fabric. The color palette features deep forest greens and earth browns, reflecting the brand's commitment to nature and durability in a high-end editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPG0DoeZmroqVWfb87VMfmyLNCTie6la-D6iwvjR44iycMQt4ujCJ8I_PxEHQYbDiUFMKVvOuOo_wuQaEPLLO_s-qGacTr-h8OOyK2SmHwDoz3qzXOqFXxiJhbtxO5XBvbIlodT5clNR3CKczCudiFD9NCi9NBIgKwHeo88kF2HkYAnOROL2we3kRFbm07GTnA3zXxNDF94co63ZhMbm-z3A9LApWBUf7scpGLkkSRdyW4d-gdKMTGsT0IhKzoiuN2un6oKvaR7dY"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-all"></div>
+</div>
+<div class="md:col-span-5 md:col-start-8">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-burnt-orange mb-4 block">Responsabilidad Ambiental</span>
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Patagonia</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Referente global en sustentabilidad. Sus prendas están diseñadas para ser reparadas, no reemplazadas. Cada fibra cuenta una historia de activismo y excelencia técnica.
+                        </p>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-kraft-beige text-burnt-orange rounded-full">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+<span class="font-label-sm text-label-sm">Sustainability Badge</span>
+</div>
+</div>
+</div>
+</div>
+<!-- The North Face -->
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-burnt-orange mb-4 block">Expedición Extrema</span>
+<h2 class="font-display-lg text-display-lg text-primary mb-6">The North Face</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Desde el Everest hasta las calles de la ciudad. El equilibrio perfecto entre la innovación de materiales de alto rendimiento y una estética atemporal que define el outdoor moderno.
+                        </p>
+<button class="bg-primary text-soft-white px-8 py-4 font-label-bold text-label-bold uppercase hover:translate-y-[-2px] transition-transform duration-300">
+                            Ver Colección
+                        </button>
+</div>
+<div class="md:col-span-6 md:col-start-7 order-1 md:order-2 relative">
+<img class="w-full aspect-[16/10] object-cover" data-alt="A striking editorial image of a yellow The North Face Nuptse jacket staged inside a high-end, minimalist timber cabin with large glass windows overlooking a snowy landscape. The lighting is crisp and clean, creating a warm, inviting luxury showroom atmosphere. The colors are dominated by the vibrant brand yellow against neutral wood tones and soft white snow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSHho-BSNnerHeLH3QCcQ_6EgWDyud5fSmgBD7d5nRsGciTeSHlmoDF51dH8ImLczoQw3AVTR3CaDgUjUVNJXDMDZT7JCUCWTK1-UzJg2z1wJWjRK5E7OhUqF6H_8aGOHMSyN1MB93-jj006aQTeoCdsrbxMwLwCL6CD3kJJKCu2YOM-AX3ajRz4inBJUuuBakzXJ3cIrmWO-5uGt8Kn9ErXeVepJA1p3-XlttNhxO8qLSznDAcFUlHfqCGhuvU36g1cr7rWqKLQk"/>
+<div class="absolute -bottom-6 -left-6 bg-soft-white p-6 shadow-xl hidden md:block">
+<p class="font-label-bold text-label-bold text-primary italic">"Never Stop Exploring"</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Carhartt -->
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4 bg-surface-variant/50 p-12 h-full flex flex-col justify-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-burnt-orange mb-4 block">Durabilidad Indestructible</span>
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Carhartt</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Workwear refinado para el entorno natural. Lonas enceradas, costuras triples y una resistencia que desafía el paso de las décadas.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[18px]">build</span> Herencia de Trabajo
+                            </li>
+<li class="flex items-center gap-3 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[18px]">shield</span> Máxima Protección
+                            </li>
+</ul>
+</div>
+<div class="md:col-span-8">
+<img class="w-full aspect-[21/9] object-cover" data-alt="An artistic composition of Carhartt duck canvas jackets and work gear arranged on a heavy oak workbench in a sunlit artisan studio. The lighting is warm golden hour sunlight streaming through a window, highlighting the rugged textures and golden-brown hues of the fabric. The aesthetic is tactile and authentic, blending industrial heritage with modern craft." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdWtJn3bLS5jYXjd-S45CDHRbxOM8ZXd2XndVTTG7BwT7aYRKBKziJBAvf4_7PCCKDESeK5EhZpAo3-B9DqebXJZbnZe7C7GWtYHXMSzYY_G1zZbzB3PptrvL2idxipdn90tPISvH3cvPJ-DJPvOIuh_q25-S5pAlckwWL4YcL9xXF3FFEafcCGYx9kDFe6N7bZ146JLEKjjORD1PH26uSZELFdzdtCM8elHQ49J5tdme1wZabiHH0V688sIg36s-IVQEIC7inqq4"/>
+</div>
+</div>
+</div>
+<!-- Columbia -->
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<div class="relative">
+<img class="w-full aspect-video object-cover" data-alt="A breathtaking panoramic landscape of the Andes mountains in Bolivia during sunrise, featuring layers of blue and purple peaks under a soft orange sky. The visual represents the vast playground for Columbia sportswear. The lighting is ethereal and high-key, maintaining a professional, serene outdoor aesthetic consistent with a luxury travel journal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmJWNohmffw6N57cTorfPPlylUeXzFWO6RxBX1iGTSpTNnyjp52TGPnmf5t60OvDwbkShO3R2ansA6SuK1l0p_dvRUU7vD9ylVlOZoWLV9IdbecLGIiXjtvR73rhrzaQ5Rv3iveyS4UI04S00JDerJY7FepxnCmUQfKw7zfWDQvXjnA_q5JQvwqAH5udqn2ycjD25cSGQraAs-6acuM7dvsJVZM1hLOmr8xqXxwjy4U-4s7mmo6zzCsis36Hu3hS4-uhtyulWrvPg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+</div>
+<div class="md:col-span-4 md:col-start-9">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Columbia</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            Tecnología probada en el Noroeste del Pacífico. Diseños funcionales que permiten disfrutar de la naturaleza sin importar las condiciones externas.
+                        </p>
+<a class="font-label-bold text-label-bold uppercase text-burnt-orange flex items-center gap-2 group" href="#">
+                            Explorar Columbia
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability Feature Callout -->
+<section class="py-24 bg-primary text-soft-white overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Compromiso con el Ciclo de Vida</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-burnt-orange flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-soft-white">cycle</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Re-utilización Consciente</h4>
+<p class="font-body-md text-body-md text-on-primary-container">Damos una segunda vida a prendas de alta gama, reduciendo el impacto ambiental de la producción textil masiva.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-burnt-orange flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-soft-white">high_quality</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase mb-2">Calidad Innegociable</h4>
+<p class="font-body-md text-body-md text-on-primary-container">Si no puede durar otros 10 años, no entra en nuestro catálogo. Curamos solo lo mejor de lo mejor.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-secondary/20 absolute -top-10 -right-10 w-full h-full -z-10 border border-on-primary-container/20"></div>
+<img class="w-full aspect-square object-cover" data-alt="A focused studio shot of a vintage hiking boot being carefully polished with organic wax. The lighting is warm and dramatic, highlighting the rich patina of the leather and the artisan's hands. The aesthetic is rugged yet refined, emphasizing the concept of longevity, care, and quality craftsmanship in a professional outdoor gear context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVc-Mz4HZ771CgQwpmP9-KuouiKK7_B8_25Qr8FULUQgjqkAYWNNxL1n3hJfYlkBLXtFNdvNxvFLLgNA-JIpIs-oQs64tRSBAh_kLYuBUsPTGGdz9sGBqVOSUSw5Ij1LqIf6c5dAcykL1OfEFIQ6L4H2sfxGSUcy5Xfie8_4Z7Jxd3gruKKuhP_7F5pGZGMymCNnXcCEqA5CHSBAUIkDJ289xiVaO0i7xefxwT_9-E893hzQBNcyTjG2xgMo_g57f7JB1ymKLzGb0"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-on-background full-width py-20 px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<span class="font-display-lg text-headline-md text-soft-white mb-4 block">Refugio Outdoor</span>
+<p class="font-body-md text-body-md text-on-primary-container/80 max-w-[240px]">
+                    Curaduría con propósito para exploradores conscientes.
+                </p>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-bold text-label-bold uppercase text-soft-white mb-6">Navegación</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 transition-transform duration-200 block" href="#">Sustentabilidad</a></li>
+<li><a class="font-body-md text-body-md text-primary-fixed-dim font-bold hover:translate-x-1 transition-transform duration-200 block" href="#">Club Refugio</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 transition-transform duration-200 block" href="#">Envíos</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 transition-transform duration-200 block" href="#">Términos y Condiciones</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-bold text-label-bold uppercase text-soft-white mb-6">Contacto</h5>
+<p class="font-body-md text-body-md text-on-primary-container/80 mb-2">Cochabamba, Bolivia</p>
+<p class="font-body-md text-body-md text-on-primary-container/80">hola@refugiooutdoor.bo</p>
+</div>
+<div class="md:col-span-1">
+<h5 class="font-label-bold text-label-bold uppercase text-soft-white mb-6">Newsletter</h5>
+<div class="flex focus-within:ring-1 focus-within:ring-burnt-orange overflow-hidden">
+<input class="bg-primary-container text-on-primary-container px-4 py-3 w-full border-none focus:ring-0 font-body-md text-body-md" placeholder="Tu email" type="email"/>
+<button class="bg-burnt-orange px-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-soft-white">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-on-primary-container/10">
+<p class="font-body-md text-body-md text-on-primary-container/60 text-center">
+                © 2024 Refugio Outdoor. Cochabamba, Bolivia. Curaduría con propósito.
+            </p>
+</div>
+</footer>
+</body></html>

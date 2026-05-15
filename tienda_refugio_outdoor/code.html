@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;family=Montserrat:wght@400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#727973",
+                        "primary-fixed": "#ccead6",
+                        "tertiary-fixed": "#ffdcc2",
+                        "secondary-fixed": "#f0e0ca",
+                        "surface-dim": "#dcd9d9",
+                        "surface-variant": "#e5e2e1",
+                        "on-tertiary-fixed": "#2b1705",
+                        "tertiary": "#3d2713",
+                        "on-tertiary-fixed-variant": "#5b412c",
+                        "surface-bright": "#fcf9f8",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#eddec7",
+                        "secondary": "#685d4b",
+                        "on-surface-variant": "#424844",
+                        "surface-tint": "#496455",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c8c2",
+                        "primary-container": "#2d4739",
+                        "on-primary-container": "#98b5a3",
+                        "on-background": "#1b1c1c",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#563c27",
+                        "inverse-primary": "#b0cdbb",
+                        "soft-white": "#FDFDFD",
+                        "on-tertiary": "#ffffff",
+                        "kraft-beige": "#F5EFE6",
+                        "primary": "#173124",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-container": "#cba78c",
+                        "inverse-surface": "#303030",
+                        "surface": "#fcf9f8",
+                        "tertiary-fixed-dim": "#e5bfa3",
+                        "on-surface": "#1b1c1c",
+                        "background": "#fcf9f8",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#b0cdbb",
+                        "on-secondary-fixed": "#221a0c",
+                        "on-secondary-container": "#6c614f",
+                        "burnt-orange": "#D1603D",
+                        "surface-container-high": "#eae7e7",
+                        "on-primary-fixed-variant": "#324c3e",
+                        "on-primary-fixed": "#062014",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed-dim": "#d3c4af",
+                        "surface-container": "#f0eded",
+                        "on-secondary-fixed-variant": "#4f4535",
+                        "inverse-on-surface": "#f3f0ef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Literata"],
+                        "label-bold": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "headline-md": ["Literata"],
+                        "body-md": ["Montserrat"],
+                        "headline-sm": ["Literata"],
+                        "display-lg-mobile": ["Literata"],
+                        "body-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F5EFE6; /* kraft-beige fallback */
+        }
+    </style>
+</head>
+<body class="bg-kraft-beige text-on-surface font-body-md selection:bg-burnt-orange selection:text-white">
+<!-- TopNavBar Component -->
+<nav class="bg-kraft-beige/90 backdrop-blur-md dark:bg-primary/95 text-primary dark:text-primary-fixed-dim docked full-width top-0 sticky z-50 border-b border-outline-variant/30 flat no shadows">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<a class="font-display-lg text-headline-sm text-primary dark:text-primary-fixed tracking-tight" href="#">Refugio Outdoor</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Lo Nuevo</a>
+<a class="font-label-bold text-label-bold uppercase text-burnt-orange border-b-2 border-burnt-orange pb-1" href="#">Tienda</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Marcas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Showroom</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:text-burnt-orange transition-all duration-300">shopping_cart</button>
+<button class="md:hidden material-symbols-outlined">menu</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<header class="mb-16">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">La Curaduría</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Selección premium de equipo técnico y ropa de trabajo. Cada pieza es inspeccionada bajo nuestros estándares de durabilidad y funcionalidad.</p>
+</header>
+<div class="flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Navigation & Filters -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-10">
+<section>
+<h3 class="font-label-bold text-label-bold uppercase text-primary mb-6 tracking-widest">Categorías</h3>
+<ul class="space-y-4">
+<li><a class="font-body-md text-primary font-bold hover:text-burnt-orange transition-colors" href="#">Refugio Essentials</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Refugio Trekking</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Refugio Workwear</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Mini Refugio</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Equipo de Ruta</a></li>
+</ul>
+</section>
+<section>
+<h3 class="font-label-bold text-label-bold uppercase text-primary mb-6 tracking-widest">Estado (Status)</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-primary text-primary focus:ring-burnt-orange rounded-none" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">10/10 - Como Nuevo</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-primary text-primary focus:ring-burnt-orange rounded-none" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">9/10 - Excelente</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 border-primary text-primary focus:ring-burnt-orange rounded-none" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-primary transition-colors">8/10 - Muy Bueno</span>
+</label>
+</div>
+</section>
+<section class="p-6 bg-white border border-outline-variant/30 rounded-lg">
+<span class="material-symbols-outlined text-burnt-orange mb-2">straighten</span>
+<h4 class="font-label-bold text-label-sm uppercase text-primary mb-2">Guía de Medidas</h4>
+<p class="font-body-md text-[13px] text-on-surface-variant leading-relaxed">Todas nuestras prendas incluyen medidas exactas en cm (axila a axila y largo total) para asegurar un calce perfecto.</p>
+</section>
+</aside>
+<!-- Product Grid -->
+<div class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-gutter">
+<!-- Product Card 1 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-6 transition-all duration-500 group-hover:shadow-xl">
+<img alt="Workwear Jacket" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A professional studio product photograph of a vintage-style brown canvas workwear jacket hanging against a minimalist light beige wooden wall. The lighting is soft and directional, highlighting the heavy-duty stitching and rugged texture of the fabric. The overall mood is authentic and premium, reflecting a sophisticated outdoor and workwear aesthetic with warm earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbQV0cihQnJU6JMiLzT8vwnxvCDF7CURQoAlDgUY5HviaJfPsUFEY7WsNvqCrAbHylLQ-3Eo9uU6ur98-IThKDOoAFMKg2Hmx3A8vCY05TVsdqYD_RuHk9WciTxZkpizjvK_EKf94kKzqGsDJ7Noa9lzWeQrAW28eqFRO-6fJuzCyJw-Iio1s4Z8zubGDceRE3LJ_K1il9BCiwvMM-d3gQ-ojX70L4RPO7wpBADkdrNs7v0oAUzx8dKebDT6MnMTUj0zG0MWbZwYw"/>
+<div class="absolute top-4 left-4 bg-burnt-orange text-white px-3 py-1 font-label-bold text-[10px] uppercase tracking-widest">
+                                Carhartt
+                            </div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-label-bold text-[10px] uppercase border border-outline-variant/50">
+                                Status: 10/10
+                            </div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="font-display-lg text-headline-sm text-primary mb-1">Detroit Jacket Vintage</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Medidas: 58cm x 65cm</p>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-label-bold text-headline-sm text-primary">Bs. 850</span>
+<button class="font-label-bold text-label-sm uppercase text-burnt-orange hover:underline underline-offset-4 transition-all">Ver Detalle</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-6 transition-all duration-500 group-hover:shadow-xl">
+<img alt="Technical Fleece" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-quality outdoor lifestyle photograph of a technical forest green fleece sweater laid out on a smooth grey rock surface outdoors. The surrounding environment suggests a high mountain trek with soft, natural alpine light. The image captures the fine micro-grid texture of the fabric and the precision of the zipper detailing in a minimalist and clean composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlcEVrOhSc_A5BES9NLxGGELaeWG7FeCo-LMP5TpslRSWlyryAR8Mlgowko24mW4ng46YZXZg_WpDhbL_dQyXbGrQ8pf86T5vtruxtR7BVwVFSzJIWDUSjVBb5QW7l-u_QznEnxvScxPrqskixpWj_lZmL4WTTqmeRfksFH0VBq-B4UEMEYEYS37HGR_doRLDenMy-sI9C4Z0U1IV-nurrpIxHz_GIquJrlKPbZdPFVqUqmjRR51ULvW7pwecTToZxh0I8FJ8YheQ"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-bold text-[10px] uppercase tracking-widest">
+                                Patagonia
+                            </div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-label-bold text-[10px] uppercase border border-outline-variant/50">
+                                Status: 9/10
+                            </div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="font-display-lg text-headline-sm text-primary mb-1">R1 Fleece Pullover</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Medidas: 54cm x 70cm</p>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-label-bold text-headline-sm text-primary">Bs. 620</span>
+<button class="font-label-bold text-label-sm uppercase text-burnt-orange hover:underline underline-offset-4 transition-all">Ver Detalle</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-6 transition-all duration-500 group-hover:shadow-xl">
+<img alt="Work Trousers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A clean, minimalist product shot of a pair of heavy-duty tan work trousers displayed on a light-colored timber floor. The trousers are folded neatly to show the reinforced knee patches and copper rivets. The lighting is bright and airy, typical of a high-end physical showroom, emphasizing the tactile quality and durability of the garment's construction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUkefEtdyGHLTplylvm611ujyfQ7rMeh04N1dqo95Hk8KgLtiBFiciQAl4xeoFoxzCN3lO37EACpTCAvDkV6ysULl-dPf2IwVwXAhdbZUezS8AWzWKSrEHtx7aUoCxCc59YUditJdah5Fn7-30oJp9Yz6xhcP_GgTQlDXeEaMFa4TDa6rDrVdFGlxBmzaq4PYTqAYyD41Tsjfhga7t634dG4PfFtaahnfSEZvDjZ0rZsuqzl6KGSbKrytMdAU36e7QfNbQV4uaLBQ"/>
+<div class="absolute top-4 left-4 bg-burnt-orange text-white px-3 py-1 font-label-bold text-[10px] uppercase tracking-widest">
+                                Carhartt
+                            </div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-label-bold text-[10px] uppercase border border-outline-variant/50">
+                                Status: 10/10
+                            </div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="font-display-lg text-headline-sm text-primary mb-1">Double Knee Pant</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Talla: 34W x 32L (44cm cintura)</p>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-label-bold text-headline-sm text-primary">Bs. 780</span>
+<button class="font-label-bold text-label-sm uppercase text-burnt-orange hover:underline underline-offset-4 transition-all">Ver Detalle</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-6 transition-all duration-500 group-hover:shadow-xl">
+<img alt="Flannel Shirt" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detailed macro shot of a blue checkered heavy flannel shirt. The focus is on the thick, woven texture of the premium cotton fabric and a single horn button. The background is a soft-focus warm interior of a timber cabin. The lighting is warm and inviting, highlighting the soft pile of the flannel and the rich colors of the pattern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQrJEJ922XGAuT4iW9u6_g3tcY1VH77l_Uoh_T62xMjQiDCphrZZ1ykk4nK8eeKxzG6L3l8Anv-swWY6eCRoWLNX_C0oh-J9wx-FbF1mslF-flGMeCBBNKjtN4CUzW2g3DZn88cjIBRZlBFlYRTc0VT8sdttS9zbR4okhsktd5-_etB-BQ5tzrUs4evROCpS8hEDgYKJ9qiKTMRBgDD6XpYmy7qCV3Z4DD3tXbQ00BkJihO98pobeR0RR1vQpCicFoMNXBtIkYptE"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-bold text-[10px] uppercase tracking-widest">
+                                Pendleton
+                            </div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-label-bold text-[10px] uppercase border border-outline-variant/50">
+                                Status: 9/10
+                            </div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="font-display-lg text-headline-sm text-primary mb-1">Board Shirt Virgin Wool</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Medidas: 56cm x 72cm</p>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-label-bold text-headline-sm text-primary">Bs. 550</span>
+<button class="font-label-bold text-label-sm uppercase text-burnt-orange hover:underline underline-offset-4 transition-all">Ver Detalle</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-6 transition-all duration-500 group-hover:shadow-xl">
+<img alt="Backpack" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A studio photograph of a classic roll-top waterproof backpack in a deep charcoal grey. The backpack is standing upright on a minimalist white pedestal against a soft grey background. The lighting is precise, emphasizing the sleek, technical lines of the waterproof zippers and the matte finish of the durable nylon fabric. Professional, clean, and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWTlyHBO4gvTxJ5VkzZm-b3I297Yl3_HrkrvZCMmR-jzgG99rOssCvvDKO1hMxvuhXxFV_pCUio5ujqEknAmCkCXUiYQsha8rZ6GuBwKSpGXXnnhnZ2WpIo1c57CoABNxQcFcF__imVDwP5glEOchQzezJgyoRcVe2VC3u_Gc10IrjDGtlTortMwUoZ5VA-7oSq1qZFzFkezeQ-qQei1hlkzTuzcmcniMfZW5rctOYbIeCYsNEzm4n7Ip0UkrWqKW6Rn3VY_SLYBI"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-bold text-[10px] uppercase tracking-widest">
+                                Black Diamond
+                            </div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-label-bold text-[10px] uppercase border border-outline-variant/50">
+                                Status: 10/10
+                            </div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="font-display-lg text-headline-sm text-primary mb-1">Street Creek 24L</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Capacidad técnica / Uso diario</p>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-label-bold text-headline-sm text-primary">Bs. 920</span>
+<button class="font-label-bold text-label-sm uppercase text-burnt-orange hover:underline underline-offset-4 transition-all">Ver Detalle</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[3/4] overflow-hidden bg-surface-container mb-6 transition-all duration-500 group-hover:shadow-xl">
+<img alt="Down Vest" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A professional product shot of a navy blue technical down vest displayed on a minimalist wood hanger. The vest is puffy and well-insulated, with subtle quilting patterns. The environment is a well-lit showroom with warm wood accents and soft atmospheric lighting. The image captures the premium quality and lightweight nature of the down insulation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHVjWgwjFGoHHFeNzXU1JJN5nfuZM_ekWvjHRTX8rbuU6AnRKZgCoE2kCezja51EiJL1upO-4BCAq9Udikc6QgoU_YkOFeOCTguOTaf_nxAwMpXF7NpLs5_5M_iP4V6tmWlXFD-hf206qDUeBDO-apBfDA9ic6r9DN7HOIZERSCmP6s3t6r2ne56VZ-bOguwCZRyTbpZ6NN6EuFjTxRWMaJG9r3o4um-rblujKa_g9bqTuW-El4UmKGpHsnTWBctkc4otEdCvkCWk"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-bold text-[10px] uppercase tracking-widest">
+                                Arc'teryx
+                            </div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-label-bold text-[10px] uppercase border border-outline-variant/50">
+                                Status: 8/10
+                            </div>
+</div>
+<div class="flex flex-col flex-1">
+<h3 class="font-display-lg text-headline-sm text-primary mb-1">Thorium AR Vest</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Medidas: 52cm x 68cm</p>
+<div class="mt-auto flex justify-between items-end">
+<span class="font-label-bold text-headline-sm text-primary">Bs. 1,150</span>
+<button class="font-label-bold text-label-sm uppercase text-burnt-orange hover:underline underline-offset-4 transition-all">Ver Detalle</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary dark:bg-on-background full-width py-20 px-margin-mobile md:px-margin-desktop flat no shadows mt-24">
+<div class="w-full grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<span class="font-display-lg text-headline-md text-soft-white mb-4 block">Refugio Outdoor</span>
+<p class="font-body-md text-on-primary-container/80 max-w-sm mb-8">
+                    Curaduría de equipo con propósito. Buscamos rescatar la durabilidad y el diseño atemporal para tus aventuras.
+                </p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-soft-white mb-6">Explorar</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 inline-block duration-200" href="#">Sustentabilidad</a></li>
+<li><a class="font-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 inline-block duration-200" href="#">Club Refugio</a></li>
+<li><a class="font-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 inline-block duration-200" href="#">Envíos</a></li>
+<li><a class="font-body-md text-on-primary-container/80 hover:text-soft-white transition-colors hover:translate-x-1 inline-block duration-200" href="#">Términos y Condiciones</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-soft-white mb-6">Ubicación</h4>
+<p class="font-body-md text-on-primary-container/80 mb-2">Cochabamba, Bolivia</p>
+<p class="font-body-md text-on-primary-container/80 mb-6">Showroom por cita previa.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-soft-white cursor-pointer hover:text-burnt-orange">language</span>
+<span class="material-symbols-outlined text-soft-white cursor-pointer hover:text-burnt-orange">camera</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto border-t border-soft-white/10 mt-16 pt-8">
+<p class="font-body-md text-label-sm text-on-primary-container/60">
+                © 2024 Refugio Outdoor. Cochabamba, Bolivia. Curaduría con propósito.
+            </p>
+</div>
+</footer>
+</body></html>

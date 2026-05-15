@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#727973",
+                      "primary-fixed": "#ccead6",
+                      "tertiary-fixed": "#ffdcc2",
+                      "secondary-fixed": "#f0e0ca",
+                      "surface-dim": "#dcd9d9",
+                      "surface-variant": "#e5e2e1",
+                      "on-tertiary-fixed": "#2b1705",
+                      "tertiary": "#3d2713",
+                      "on-tertiary-fixed-variant": "#5b412c",
+                      "surface-bright": "#fcf9f8",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#eddec7",
+                      "secondary": "#685d4b",
+                      "on-surface-variant": "#424844",
+                      "surface-tint": "#496455",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c2c8c2",
+                      "primary-container": "#2d4739",
+                      "on-primary-container": "#98b5a3",
+                      "on-background": "#1b1c1c",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#563c27",
+                      "inverse-primary": "#b0cdbb",
+                      "soft-white": "#FDFDFD",
+                      "on-tertiary": "#ffffff",
+                      "kraft-beige": "#F5EFE6",
+                      "primary": "#173124",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary-container": "#cba78c",
+                      "inverse-surface": "#303030",
+                      "surface": "#fcf9f8",
+                      "tertiary-fixed-dim": "#e5bfa3",
+                      "on-surface": "#1b1c1c",
+                      "background": "#fcf9f8",
+                      "on-secondary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#b0cdbb",
+                      "on-secondary-fixed": "#221a0c",
+                      "on-secondary-container": "#6c614f",
+                      "burnt-orange": "#D1603D",
+                      "surface-container-high": "#eae7e7",
+                      "on-primary-fixed-variant": "#324c3e",
+                      "on-primary-fixed": "#062014",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e5e2e1",
+                      "secondary-fixed-dim": "#d3c4af",
+                      "surface-container": "#f0eded",
+                      "on-secondary-fixed-variant": "#4f4535",
+                      "inverse-on-surface": "#f3f0ef"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Literata"],
+                      "label-bold": ["Montserrat"],
+                      "label-sm": ["Montserrat"],
+                      "headline-md": ["Literata"],
+                      "body-md": ["Montserrat"],
+                      "headline-sm": ["Literata"],
+                      "display-lg-mobile": ["Literata"],
+                      "body-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #F5EFE6; }
+    </style>
+</head>
+<body class="bg-kraft-beige text-on-surface selection:bg-burnt-orange selection:text-soft-white">
+<!-- TopNavBar Component -->
+<nav class="bg-kraft-beige/90 backdrop-blur-md dark:bg-primary/95 text-primary dark:text-primary-fixed-dim docked full-width top-0 sticky z-50 border-b border-outline-variant/30 flat no shadows">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-display-lg text-headline-sm text-primary dark:text-primary-fixed tracking-tight">Refugio Outdoor</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Lo Nuevo</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Tienda</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Marcas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Showroom</a>
+<a class="font-label-bold text-label-bold uppercase text-burnt-orange border-b-2 border-burnt-orange pb-1" href="#">Contacto</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:text-burnt-orange transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-20 flex flex-col md:flex-row gap-gutter items-center">
+<div class="md:w-1/2">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">El refugio de tu próxima aventura.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-lg">Visítanos en nuestro showroom en Cochabamba para una experiencia personalizada. Un espacio diseñado para inspirar, donde cada material cuenta una historia de durabilidad y respeto por la montaña.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-primary text-soft-white font-label-bold text-label-bold uppercase tracking-wider hover:bg-burnt-orange transition-all duration-300 shadow-md" href="https://wa.me/business">
+<span class="material-symbols-outlined mr-2" data-icon="calendar_today">calendar_today</span>
+                        Reserva Showroom (4h)
+                    </a>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-burnt-orange animate-pulse"></div>
+<span class="font-label-sm text-label-sm text-burnt-orange uppercase">Atención prioritaria vía WhatsApp</span>
+</div>
+</div>
+<div class="md:w-1/2 aspect-square relative overflow-hidden shadow-xl rounded-lg">
+<img alt="Interior Showroom Refugio Outdoor" class="w-full h-full object-cover" data-alt="A luxury mountain showroom interior featuring high ceilings with exposed warm timber beams and large floor-to-ceiling windows overlooking a soft pine forest. The lighting is golden and atmospheric, illuminating high-end outdoor gear displayed on minimalist wooden pedestals. The aesthetic is modern-rustic with a palette of forest greens, kraft beiges, and burnt oranges, evoking a sense of high-end sanctuary and professional craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrXC0tzQ_uKniOrVO8fXJUpKWv6A7_QDtzB8QYPK1GQuGdskm9t34nhTqbasVrmboJSpJW4G2nDduTWyZVaE_Nt-3ayOEt3yfpSQ4vMyqcQfWxQO97gij4m4rfEAhk82C1LYtbVJWex5dkfmiSI7CkiY395Bo7W3TE7hT7fsA9ab-2r5dnpbl7Kuva_DPhDMccud2obB_dnyE9s9lJehIgGqOuMDWPGVIbl73xrZYL_p6HCEBau8kNMBNlmzgXGMF3Cf_6FbjXFJg"/>
+</div>
+</section>
+<!-- Showroom Gallery & Map Bento Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Image - Main Vibe -->
+<div class="md:col-span-8 h-[400px] bg-soft-white overflow-hidden shadow-sm relative group">
+<img alt="Showroom texture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A detailed shot of a tactile showroom display showcasing technical gear against a backdrop of warm, textured wooden panels. The lighting is soft and intentional, highlighting the quality of the fabrics and materials. Soft white surfaces contrast with charcoal black metal fixtures, maintaining the brand's minimalist and premium aesthetic. The mood is calm, professional, and authentic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASd-bL_kjGb51qjxsvxUYbR3DDAEDb15NkiVuTeKPVoHCPKbyWYqxIes_Whh_IwZZAh9N5QmcYb27mKGeL5oXbbjRbbEbsHVVS7W1m1a02sjBnvsRpDdMkY_uA5WNeXCb52RVFunOK51bQDZdyh5gEJXnvcK5n-CSjmoxTD7VbIzwH8NX21-224TUP0dlOjHLh0jwSUtEz-VmPKL4reDErnI_6WVfRRa3QtTh_LJeIGhpFvdr1W2Hl2AuimtwIdkAD900VLAoOh6M"/>
+<div class="absolute bottom-6 left-6 bg-kraft-beige/80 backdrop-blur-sm p-4 border-l-4 border-burnt-orange">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Maderas Nobles</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Calidez que abraza el equipo técnico.</p>
+</div>
+</div>
+<!-- Contact Info Card -->
+<div class="md:col-span-4 bg-primary p-8 flex flex-col justify-center text-soft-white shadow-lg">
+<h2 class="font-headline-sm text-headline-sm mb-6 border-b border-primary-fixed-dim pb-4">Ubicación</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-burnt-orange" data-icon="location_on">location_on</span>
+<div>
+<p class="font-label-bold text-label-bold">Showroom Cochabamba</p>
+<p class="font-body-md text-body-md opacity-80">Av. Salamanca esq. Antezana, Edificio Altair.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-burnt-orange" data-icon="schedule">schedule</span>
+<div>
+<p class="font-label-bold text-label-bold">Horarios</p>
+<p class="font-body-md text-body-md opacity-80">Lun - Vie: 10:00 - 19:30<br/>Sáb: 10:00 - 13:00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Section -->
+<div class="md:col-span-4 h-[300px] bg-surface-variant overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Map location" class="w-full h-full object-cover" data-alt="A stylized minimalist map of a city layout with clean linework in charcoal black against a light kraft beige background. The aesthetic is architectural and clean, featuring subtle marker points in burnt orange. The map emphasizes the urban grid of Cochabamba, Bolivia, presenting the location of the showroom as an intentional point of destination in a sophisticated, uncluttered visual style." data-location="Cochabamba" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQar-BrRIiqLzcghHKkxPmDBYjYHd0wU1jp4b_AqDAm0UqFTmWhr3YhiYq0yXjoHKF22R7XlaowEZ-lSBaNnvqULKQaCejw_hiGwU0uN48rhkVFfvyxTMK78smslH_7m4edFio-v-1Y441zKbLoxp2_bDVCwxXJdOaInY-Q2UIYbMfjDP7zzeTq_PAIOq3t6peu9MOuLU31acPiI_5fgg6Umln14lxy0fmk7TrRcUKiysqLrVjGBgnVVo7hFn0YXVI27aAf6w7oIk"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-burnt-orange/20 rounded-full animate-ping absolute"></div>
+<span class="material-symbols-outlined text-burnt-orange text-4xl relative z-10" data-icon="location_on" data-weight="fill">location_on</span>
+</div>
+</div>
+<!-- Small Image - Detail -->
+<div class="md:col-span-4 h-[300px] overflow-hidden">
+<img alt="Gear detail" class="w-full h-full object-cover" data-alt="A close-up photograph of premium outdoor equipment including a climbing rope and high-end jacket draped over a smooth oak table. The lighting is low-key and dramatic, emphasizing the varied textures of the materials. The color palette consists of deep forest greens, earthy browns, and subtle highlights on metal buckles. The composition is artistic and suggests a lifestyle of curated adventure and quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgOSYk11aUwsy3_qdxZ0TssMIo8sUifYG5esjUU3uzUu_-MY3e3udrc7oHgdqOioWN7yk89sy0K_qZsWlrQg1iAAusX-pGwOtXjktvO6EHLqY08nV6XMs7gWzJAY3iZddg9fnVBvBcLkf2enFfqJrsoWUrBBnofk7Kbr5LHRZLj5KeHED2UWax5TQ7HnaU8K4vV-FQ2Lje5UpUWpIZ2lpWoWRxdwi3x8ktWCY6Vz3cnkNXgLMyMYM76jBMcx6FK0o1F-IQvFJ-e7o"/>
+</div>
+<!-- Small Image - Lighting -->
+<div class="md:col-span-4 h-[300px] overflow-hidden">
+<img alt="Lighting detail" class="w-full h-full object-cover" data-alt="Interior architectural detail of the showroom showing the interplay of warm pendant lighting and vertical wooden slats. The scene is bright yet cozy, with soft shadows that create depth and rhythm along the wall. The design is minimalist and modern, using natural materials to create a sanctuary-like atmosphere. The focus is on the warmth and authenticity of the physical retail space." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV0ZwqeubrClg1F4PmcdePEKkgJh_y4C0xGEpZL-QsZMK2MVLIT_A5lnsNGozBIU1W-QsDTP8tz0oAVY8K6W1z1WFCL1Ex4G0ora3u4vFOgeRYKotBnjMZUGVAOyj1cFqUPLJOu7AqmERL-IlBYlwQVRKxAiabmKH9qvURCfmIsLV9Cc1h3VlGMARruHmJ_qgBpIZfv-JDsFbtPLvtnZCxNdgRsg43D6isiWgctPe-w2RDAsuo2-cTCcOkMgRQD-nGYrMTcpAZb1c"/>
+</div>
+</div>
+</section>
+<!-- Club Refugio Subscription Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-32 bg-primary-container text-soft-white my-20">
+<div class="max-w-3xl mx-auto text-center">
+<span class="font-label-bold text-label-bold text-burnt-orange uppercase tracking-[0.2em] mb-4 block">Membresía Exclusiva</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg mb-6">Únete al Club Refugio</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-10">Sé el primero en acceder a nuestras ediciones limitadas y lanzamientos exclusivos antes que nadie. Curaduría con propósito directamente en tu bandeja.</p>
+<form class="flex flex-col md:flex-row gap-4 items-end">
+<div class="flex-1 w-full text-left">
+<label class="font-label-sm text-label-sm uppercase mb-2 block opacity-70" for="email">Email del Aventurero</label>
+<input class="w-full bg-transparent border-b border-on-primary-container py-3 px-0 font-body-md text-body-md focus:border-burnt-orange focus:ring-0 transition-colors placeholder:text-on-primary-container/40" id="email" placeholder="hola@tuaventura.com" type="email"/>
+</div>
+<button class="w-full md:w-auto px-10 py-4 bg-burnt-orange text-soft-white font-label-bold text-label-bold uppercase hover:bg-soft-white hover:text-primary transition-all duration-300" type="submit">
+                        Suscribirme
+                    </button>
+</form>
+<p class="mt-6 font-label-sm text-label-sm text-on-primary-container/60 italic text-center">Respetamos tu privacidad. Solo contenido de alto valor.</p>
+</div>
+</section>
+<!-- Sustainability Badge / Special Feature -->
+<section class="px-margin-mobile md:px-margin-desktop pb-24 text-center">
+<div class="inline-flex items-center gap-3 px-6 py-3 bg-kraft-beige border border-burnt-orange rounded-full">
+<span class="material-symbols-outlined text-burnt-orange" data-icon="eco" data-weight="fill">eco</span>
+<span class="font-label-bold text-label-bold text-primary uppercase">Compromiso Sustentable: 1% para la Montaña</span>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-primary dark:bg-on-background full-width">
+<div class="w-full py-20 px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<span class="font-display-lg text-headline-md text-soft-white mb-4 block">Refugio Outdoor</span>
+<p class="font-body-md text-body-md text-on-primary-container/80 mb-6">Equipamiento técnico para quienes ven en la montaña un hogar eterno.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold text-soft-white uppercase mb-6">Explorar</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-soft-white hover:translate-x-1 transition-all duration-200 block" href="#">Sustentabilidad</a></li>
+<li><a class="font-body-md text-body-md text-primary-fixed-dim font-bold hover:translate-x-1 transition-all duration-200 block" href="#">Club Refugio</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-soft-white hover:translate-x-1 transition-all duration-200 block" href="#">Envíos</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container/80 hover:text-soft-white hover:translate-x-1 transition-all duration-200 block" href="#">Términos y Condiciones</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold text-soft-white uppercase mb-6">Contacto</h4>
+<div class="font-body-md text-body-md text-on-primary-container/80 space-y-4">
+<p>Cochabamba, Bolivia</p>
+<p>hola@refugiooutdoor.com</p>
+<p>+591 4 4567890</p>
+</div>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-bold text-label-bold text-soft-white uppercase mb-6">Social</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-on-primary-container/30 flex items-center justify-center hover:bg-burnt-orange hover:border-burnt-orange transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-soft-white" data-icon="camera">camera</span>
+</a>
+<a class="w-10 h-10 border border-on-primary-container/30 flex items-center justify-center hover:bg-burnt-orange hover:border-burnt-orange transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-soft-white" data-icon="share">share</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-4 border-t border-on-primary-container/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-primary-container/60">© 2024 Refugio Outdoor. Cochabamba, Bolivia. Curaduría con propósito.</p>
+<div class="flex gap-6">
+<span class="font-label-sm text-label-sm text-on-primary-container/40">Visa</span>
+<span class="font-label-sm text-label-sm text-on-primary-container/40">Mastercard</span>
+<span class="font-label-sm text-label-sm text-on-primary-container/40">QR</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
