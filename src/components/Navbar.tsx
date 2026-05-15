@@ -13,7 +13,8 @@ export default function Navbar() {
   const cartItems = useCartStore((state) => state.items);
 
   return (
-    <header className="bg-kraft-beige/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30">
+    <>
+      <header className="bg-kraft-beige/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
         <Link href="/" className="font-poppins text-2xl font-semibold text-primary tracking-tight">
           Refugio Outdoor
@@ -62,9 +63,10 @@ export default function Navbar() {
           <Link href="/contacto" className="font-montserrat font-bold text-base uppercase text-primary pb-2">Contacto</Link>
         </div>
       )}
+      </header>
 
       {/* Cart Slide-over */}
       <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
-    </header>
+    </>
   );
 }
