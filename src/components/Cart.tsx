@@ -17,9 +17,12 @@ export default function Cart({ isOpen, onClose }: CartProps) {
     
     let message = "Hola Refugio Outdoor, quiero comprar los siguientes artículos:\n\n";
     items.forEach((item, index) => {
-      message += `${index + 1}. ${item.name} (${item.brand}) - Talla: ${item.size} - Estado: ${item.status} -> Bs. ${item.price}\n`;
+      message += `${index + 1}. ${item.name} (${item.brand})\n`;
+      message += `   Talla: ${item.size} | Estado: ${item.status}\n`;
+      message += `   Precio: Bs. ${item.price}\n`;
+      message += `   Imagen: ${item.image}\n\n`;
     });
-    message += `\nTotal a pagar: Bs. ${getTotal()}`;
+    message += `Total a pagar: Bs. ${getTotal()}`;
 
     const url = `https://wa.me/59179981530?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
