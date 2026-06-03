@@ -187,11 +187,10 @@ export default function AdminPage() {
                 <label 
                   className={`bg-brand-accent text-soft-white px-6 py-3 rounded-full font-bold text-sm uppercase hover:bg-brand-accent/90 transition-all flex items-center gap-2 mx-auto cursor-pointer ${isScanning || isPublishing ? "opacity-50 pointer-events-none" : ""}`}
                 >
-                  {isScanning ? "Analizando..." : <><Camera size={20} /> Usar Cámara</>}
+                  {isScanning ? "Analizando..." : <><Camera size={20} /> Cámara / Galería</>}
                   <input 
                     type="file" 
                     accept="image/*" 
-                    capture="environment" 
                     className="hidden" 
                     onChange={(e) => {
                       if (e.target.files && e.target.files[0]) {
