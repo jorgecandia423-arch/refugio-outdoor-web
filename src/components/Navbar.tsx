@@ -15,7 +15,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full bg-soft-white border-b border-outline-variant/30 sticky top-0 z-50">
+      <header className="w-full bg-kraft-beige/90 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-50">
       <div className="max-w-container-max w-full mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Refugio Outdoor" width={180} height={60} className="object-contain" />
