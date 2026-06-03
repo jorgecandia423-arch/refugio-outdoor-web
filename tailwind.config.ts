@@ -40,7 +40,7 @@ const config: Config = {
       spacing: {
         "margin-desktop": "64px",
         "gutter": "24px",
-        "container-max": "1280px",
+        "container-max": "1600px",
         "margin-mobile": "20px",
         base: "8px",
       },

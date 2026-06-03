@@ -24,7 +24,7 @@ export default function Tienda() {
   });
 
   return (
-    <main className="flex-grow max-w-[1600px] w-full mx-auto px-6 md:px-12 py-12">
+    <main className="flex-grow max-w-container-max w-full mx-auto px-6 md:px-12 py-12">
       <header className="mb-16">
         <h1 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-4">La curaduría</h1>
         <p className="font-montserrat text-lg text-on-surface-variant max-w-2xl">
