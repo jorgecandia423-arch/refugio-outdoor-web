@@ -2,158 +2,239 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { MoveRight } from "lucide-react";
+import { MoveRight, ShieldCheck, MapPin, Search, Leaf, Zap } from "lucide-react";
+import { useState, useEffect } from "react";
+import productsData from "@/data/products.json";
+import { Product } from "@/store/useCartStore";
+import { useCartStore } from "@/store/useCartStore";
+import { useRouter } from "next/navigation";
+
+const HERO_IMAGES = [
+  {
+    src: "/bolivia_trekking.png",
+    title: "La Curaduría",
+    subtitle: "Ropa de Segunda Mano de Alta Gama para Montaña y Ciudad",
+    location: "Tunari, Cochabamba"
+  },
+  {
+    src: "/salar_uyuni_adventure.png",
+    title: "Aventura Sin Límites",
+    subtitle: "Equipamiento para Terrenos Extremos",
+    location: "Salar de Uyuni, Potosí"
+  },
+  {
+    src: "/illimani_camping.png",
+    title: "El Legado de la Montaña",
+    subtitle: "Prendas que Resisten el Paso del Tiempo",
+    location: "Illimani, La Paz"
+  },
+  {
+    src: "/madidi_jungle.png",
+    title: "Exploración Profunda",
+    subtitle: "Rendimiento Técnico en la Selva Tropical",
+    location: "Madidi, Beni"
+  },
+  {
+    src: "/cordillera_real.png",
+    title: "Cumbres Heladas",
+    subtitle: "Aislamiento Térmico para las Alturas",
+    location: "Cordillera Real, La Paz"
+  }
+];
 
 export default function Home() {
+  const products = productsData as Product[];
+  const addItem = useCartStore(state => state.addItem);
+  const router = useRouter();
+  
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % HERO_IMAGES.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleProductClick = (id: string) => {
+    router.push(`/producto/${id}`);
+  };
+
+  const handleQuickAdd = (e: React.MouseEvent, product: Product) => {
+    e.stopPropagation();
+    addItem(product);
+  };
+
   return (
-    <main className="flex-grow">
-      {/* Hero Section */}
-      <section className="relative h-[80vh] min-h-[600px] w-full overflow-hidden flex items-center">
-        <Image 
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRaJgRuJ1iS1DwjZsi1s56OkCi7BBBIa1bGNuR6-PE4KBG4BNOvSlEI7m7OofvYK27wO_p0QST1lvxro-bPKXe3vpTvx1XhnfkdskZOHIVdyfT_DaIvflmOJqkVfYWyb8io6I2Q0SiUG1KkA_p6i-mFYX25GGdT7fSGMINmiNChlutAoIc-OwL4pvABU4ykommBHV6Nj8woIifSsC07Ngtz3p48olyx2SfYzdPx4Aibtma84Lc0bll2gxLqA3NUGuarWWoJdkyxh4" 
-          alt="Mountain Trail" 
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-primary/20"></div>
-        <div className="relative max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full z-10">
-          <div className="max-w-2xl bg-kraft-beige/40 backdrop-blur-sm p-8 md:p-12 border-l-4 border-burnt-orange">
-            <h1 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
-              Prendas con segunda vida para tu próxima ruta
-            </h1>
-            <Link href="/tienda" className="inline-block bg-primary text-soft-white font-montserrat font-bold text-sm uppercase px-8 py-4 hover:translate-y-[-2px] hover:shadow-lg transition-all duration-300">
-              Ver el Drop Actual
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Concept Section */}
-      <section className="py-24 bg-kraft-beige">
-        <div className="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
-          <span className="text-burnt-orange font-montserrat font-bold text-sm uppercase tracking-widest block mb-4">
-            Filosofía de Selección
-          </span>
-          <h2 className="font-poppins text-3xl md:text-4xl italic text-primary leading-relaxed mb-8">
-            "Creemos en la durabilidad por encima de la tendencia. Cada pieza en Refugio es seleccionada una a una, evaluando su historia técnica y su potencial para seguir explorando."
-          </h2>
-          <div className="w-16 h-px bg-outline-variant mx-auto mb-8"></div>
-          <p className="font-montserrat text-lg text-on-surface-variant">
-            Nuestra curaduría con propósito rescata lo mejor del equipo outdoor mundial. Desde chaquetas técnicas de alta gama hasta capas base esenciales, garantizamos que cada hallazgo esté listo para enfrentar los senderos más exigentes de Bolivia.
-          </p>
-        </div>
-      </section>
-
-      {/* Hallazgos Bento Grid */}
-      <section className="py-24 bg-soft-white">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              <h3 className="font-poppins text-3xl font-semibold text-primary">Hallazgos Exclusivos</h3>
-              <p className="font-montserrat text-base text-on-surface-variant mt-2">Curaduría de marcas icónicas</p>
-            </div>
-            <div className="hidden md:block">
-              <Link href="/tienda" className="font-montserrat font-bold text-sm text-burnt-orange flex items-center gap-2 hover:gap-4 transition-all uppercase">
-                VER TODO EL CATÁLOGO <MoveRight size={20} />
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter md:h-[700px]">
-            {/* Main Feature */}
-            <div className="md:col-span-7 md:row-span-2 group relative overflow-hidden bg-kraft-beige min-h-[400px]">
-              <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1fqAz17GeCQ8n9FGwyTtNGuAtFuFGjYHweBCtZmhnIY4yzrPdmquMNmzdn3tf6ESHR3MoXkn4D9s8EgwW-F6MMi3-vc9cFp6uXSJdgWU4CvU9ylWhzlm0btBePjFUdr8pCtMDLY0PTjp8op9RXWTg4AJM3dhmqlqUhYsYKKVQHcbfapNOT-YiAPmnOy8vOQ7Kt0RisaoL4a6DZBudqXABs3wMO4pOaKOi2c9ImZ8Q5OK4NpbtQRIsfcdRgKlip1cwZW-9SwefJy4"
-                alt="Patagonia Jacket"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-8 text-soft-white">
-                <span className="bg-burnt-orange text-[10px] font-bold uppercase tracking-tighter px-2 py-1 self-start mb-4">Sustainability Badge</span>
-                <h4 className="font-poppins text-2xl font-semibold mb-1">Patagonia Torrentshell 3L</h4>
-                <p className="font-montserrat text-xs opacity-90 uppercase font-medium">Estado: Como Nuevo</p>
-              </div>
-            </div>
-
-            {/* Sub Features */}
-            <div className="md:col-span-5 group relative overflow-hidden bg-surface-container min-h-[300px]">
-              <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc4yqJa3gSt6ScaQpI3Cq3OG8JKn2Btm3XsssFyRd7Fo2AUaNFQnaPk6URR3I3iSCDZwA_Hur66xod_TnryhmnvU_OnB7XQCiuPpkUSmNuU2JfNJHjveBrJnA8UF9HinE63W9Hq5V-7456lYR_DoQKdBsvisQjebc00j4qTOkJljmdMjA9-sTXVq3nj2sdYpvVa0D2GufG52IgN_CwE9yqJ1sL3X1cYOjd1MsoaCg9H9-7l69GXOuTbeWz-OH44SMCyYsIpC3axrM"
-                alt="The North Face Boots"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-              <div className="absolute bottom-6 left-6 text-soft-white">
-                <p className="font-montserrat font-bold text-sm uppercase">The North Face VECTIV</p>
-                <p className="font-montserrat text-sm">Calzado de aproximación</p>
-              </div>
-            </div>
-
-            <div className="md:col-span-5 group relative overflow-hidden bg-surface-container min-h-[300px]">
-              <Image 
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4xqP-wfB-nHZWT9l2LTbhF1wpOScVBwaLQAJXzThwze3uWVR5X5_DAk97uAhfWStLrf3a31NXY31xC-zg2fcjKlWcwviDH8TxkmI-CSMf_rMZZeNfCKBehAKwz9ObqH1a8bfiUOAEEGFW40WL5MykLY3PnQvVLxteCs7BodMgHoWNHR8Rv2m0Hyx1LbGBkRN1cLtgv_2g9kDudnPQCc3IfxdosGvvqV5kPxk5HM39Vt0ERwS94VyU-7J2ag5kh1cRlmeK7jojrdg"
-                alt="Arc'teryx Fleece"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
-              <div className="absolute bottom-6 left-6 text-soft-white">
-                <p className="font-montserrat font-bold text-sm uppercase">Arc'teryx Delta LT</p>
-                <p className="font-montserrat text-sm">Capa intermedia técnica</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-24 bg-primary text-soft-white">
-        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="font-poppins text-3xl md:text-4xl font-semibold mb-6">Únete al Club Refugio</h2>
-            <p className="font-montserrat text-lg text-primary-fixed-dim mb-8">
-              Recibe acceso anticipado a nuestros drops mensuales y contenido exclusivo sobre mantenimiento de equipo y rutas sostenibles.
-            </p>
-            <form className="flex flex-col gap-4" onSubmit={(e) => { e.preventDefault(); alert("Te has unido al Club Refugio exitosamente!"); }}>
-              <input 
-                type="text" 
-                placeholder="Tu nombre completo" 
-                required
-                className="bg-transparent border-b border-outline-variant focus:border-soft-white transition-colors py-3 px-0 w-full font-montserrat text-soft-white outline-none focus:ring-0"
-              />
-              <input 
-                type="tel" 
-                placeholder="Tu número de WhatsApp" 
-                required
-                className="bg-transparent border-b border-outline-variant focus:border-soft-white transition-colors py-3 px-0 w-full font-montserrat text-soft-white outline-none focus:ring-0"
-              />
-              <div className="flex gap-4">
-                <input 
-                  type="text" 
-                  placeholder="Talla Superior (Top)" 
-                  className="bg-transparent border-b border-outline-variant focus:border-soft-white transition-colors py-3 px-0 w-1/2 font-montserrat text-soft-white outline-none focus:ring-0"
-                />
-                <input 
-                  type="text" 
-                  placeholder="Talla Inferior (Pantalón)" 
-                  className="bg-transparent border-b border-outline-variant focus:border-soft-white transition-colors py-3 px-0 w-1/2 font-montserrat text-soft-white outline-none focus:ring-0"
-                />
-              </div>
-              <button type="submit" className="bg-burnt-orange text-soft-white font-montserrat font-bold text-sm uppercase px-8 py-4 hover:bg-burnt-orange/90 transition-all mt-4">
-                Unirme al Club
-              </button>
-            </form>
-          </div>
-          <div className="relative hidden md:block aspect-square overflow-hidden rounded-lg">
+    <main className="flex-grow font-montserrat">
+      {/* Hero Section with Carousel */}
+      <section className="relative w-full h-[85vh] flex items-center justify-center overflow-hidden">
+        {HERO_IMAGES.map((img, index) => (
+          <div 
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+          >
+            <div className="absolute inset-0 bg-black/40 z-10"></div>
             <Image 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhPiOCJmB9VbL2Hhqej53w9jGmjQzlax0xUZtYbyKBAssUWvjQIRyaL1E5BHxDEwwp3c-dwaZuVd7mTjWjoFNs5qhJDpTCdMdD4LqVVaNBvfsyC8yWQjSMEdV5T1n5APNx6qc9Gu-D0FP3XUVXjzAsItHZyIJwq14oKTXA-IgIw_yFzcvimiGgb60-PT3dH6aGld5-ZqRhkw2pX2--eMNswn6pUdLF3NZjlkKZH7FZOhBvp6IQQjDFE7ovo2UXSjLQaGwy-3cC9qA"
-              alt="Community"
+              src={img.src} 
+              alt={img.title}
               fill
-              className="object-cover opacity-60"
+              className={`object-cover object-center transition-transform duration-[10000ms] ease-out ${index === currentSlide ? "scale-105" : "scale-100"}`}
+              priority={index === 0}
             />
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4 max-w-4xl mx-auto text-center text-soft-white overflow-hidden">
+               <div className={`mb-4 inline-flex items-center gap-2 bg-black/40 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider border border-white/10 transition-all duration-1000 ease-out delay-300 ${index === currentSlide ? "translate-y-0 opacity-100" : "-translate-y-12 opacity-0"}`}>
+                 <MapPin size={14} className="text-brand-accent" /> {img.location}
+               </div>
+               <h1 className={`font-poppins text-4xl md:text-6xl lg:text-7xl font-bold uppercase mb-4 tracking-tight drop-shadow-2xl transition-all duration-1000 ease-out delay-500 ${index === currentSlide ? "translate-x-0 opacity-100 scale-100" : "-translate-x-24 opacity-0 scale-95"}`}>
+                 {img.title}
+               </h1>
+               <p className={`font-montserrat text-lg md:text-xl font-medium mb-10 max-w-2xl drop-shadow-md transition-all duration-1000 ease-out delay-700 ${index === currentSlide ? "translate-x-0 opacity-100 scale-100" : "translate-x-24 opacity-0 scale-95"}`}>
+                 {img.subtitle}
+               </p>
+               <div className={`flex flex-col sm:flex-row gap-4 items-center transition-all duration-1000 ease-out delay-[900ms] ${index === currentSlide ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}`}>
+                 <Link 
+                   href="/tienda" 
+                   className="bg-brand-accent text-soft-white px-8 py-4 rounded-lg font-bold uppercase tracking-wide hover:bg-brand-accent/90 hover:-translate-y-1 transition-all flex items-center gap-2 shadow-2xl hover:shadow-brand-accent/30"
+                 >
+                   Explorar Catálogo <MoveRight size={20} />
+                 </Link>
+               </div>
+            </div>
           </div>
+        ))}
+
+        {/* Carousel Indicators */}
+        <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center gap-3">
+          {HERO_IMAGES.map((_, index) => (
+            <button 
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`h-1.5 rounded-full transition-all duration-500 ${index === currentSlide ? "w-12 bg-brand-accent" : "w-6 bg-white/40 hover:bg-white/60"}`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section className="bg-surface-variant py-8 border-y border-outline-variant/30">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="flex flex-col items-center gap-2 text-primary group">
+            <div className="bg-primary/5 p-3 rounded-full group-hover:bg-brand-accent/10 transition-colors">
+              <ShieldCheck size={28} className="text-brand-accent" />
+            </div>
+            <h3 className="font-bold text-xs uppercase tracking-wider">Autenticidad Garantizada</h3>
+            <p className="text-[10px] text-on-surface-variant max-w-[150px]">Cada prenda es inspeccionada y curada</p>
+          </div>
+          <div className="flex flex-col items-center gap-2 text-primary group">
+            <div className="bg-primary/5 p-3 rounded-full group-hover:bg-brand-accent/10 transition-colors">
+              <Leaf size={28} className="text-brand-accent" />
+            </div>
+            <h3 className="font-bold text-xs uppercase tracking-wider">Moda Circular</h3>
+            <p className="text-[10px] text-on-surface-variant max-w-[150px]">Extendiendo la vida del equipo de montaña</p>
+          </div>
+          <div className="flex flex-col items-center gap-2 text-primary group">
+            <div className="bg-primary/5 p-3 rounded-full group-hover:bg-brand-accent/10 transition-colors">
+              <Zap size={28} className="text-brand-accent" />
+            </div>
+            <h3 className="font-bold text-xs uppercase tracking-wider">Estado Impecable</h3>
+            <p className="text-[10px] text-on-surface-variant max-w-[150px]">Solo piezas 9/10 y 10/10 seleccionadas</p>
+          </div>
+          <div className="flex flex-col items-center gap-2 text-primary group">
+            <div className="bg-primary/5 p-3 rounded-full group-hover:bg-brand-accent/10 transition-colors">
+              <MapPin size={28} className="text-brand-accent" />
+            </div>
+            <h3 className="font-bold text-xs uppercase tracking-wider">Envíos a Nivel Nacional</h3>
+            <p className="text-[10px] text-on-surface-variant max-w-[150px]">Llegamos a toda Bolivia</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Picks / Latest Additions */}
+      <section className="py-20 max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+          <div>
+            <h2 className="font-poppins text-3xl md:text-4xl font-bold uppercase text-primary mb-2">
+              Últimos Ingresos
+            </h2>
+            <p className="text-on-surface-variant font-medium">Las piezas más exclusivas recién añadidas al catálogo</p>
+          </div>
+          <Link href="/tienda" className="text-sm font-bold text-brand-accent uppercase hover:underline flex items-center gap-1">
+            Ver todas las prendas <MoveRight size={16} />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {products.filter(p => !p.soldAt).slice(0, 4).map((product) => (
+            <div 
+              key={product.id} 
+              className="group cursor-pointer bg-soft-white rounded-xl overflow-hidden border border-outline-variant/30 hover:shadow-2xl transition-all duration-300 flex flex-col h-full hover:-translate-y-1"
+              onClick={() => handleProductClick(product.id)}
+            >
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-surface-variant">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-cover object-center group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
+                
+                {product.status && (
+                  <div className="absolute top-4 left-4 bg-primary text-soft-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded backdrop-blur-md">
+                    {product.status}
+                  </div>
+                )}
+                
+                {product.authenticityCode && (
+                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md p-1.5 rounded-full text-brand-accent" title="Prenda Verificada">
+                    <ShieldCheck size={16} />
+                  </div>
+                )}
+
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <button 
+                    onClick={(e) => handleQuickAdd(e, product)}
+                    className="bg-brand-accent text-soft-white px-6 py-3 rounded-lg font-bold text-sm uppercase transform translate-y-4 group-hover:translate-y-0 transition-all hover:bg-brand-accent/90"
+                  >
+                    Añadir al Carrito
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-5 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-2">
+                  <span className="text-xs font-bold text-on-surface-variant uppercase tracking-wider">{product.brand}</span>
+                  <span className="text-xs font-bold text-primary bg-surface-variant px-2 py-1 rounded">{product.size}</span>
+                </div>
+                <h3 className="font-poppins font-bold text-primary text-lg leading-tight mb-4 group-hover:text-brand-accent transition-colors line-clamp-2">
+                  {product.name}
+                </h3>
+                
+                <div className="mt-auto pt-4 border-t border-outline-variant/30">
+                  <p className="font-mono text-xl font-bold text-primary">
+                    Bs. {product.price}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      
+      {/* Search / Categories Prompt */}
+      <section className="bg-primary text-soft-white py-24 border-t-4 border-brand-accent">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="font-poppins text-3xl md:text-5xl font-bold uppercase mb-6">¿Buscas algo específico?</h2>
+          <p className="font-montserrat text-lg text-soft-white/80 mb-10 max-w-2xl mx-auto">
+            Explora por categorías, marcas o tallas en nuestro catálogo completo.
+          </p>
+          <Link 
+            href="/tienda" 
+            className="inline-flex items-center justify-center gap-3 bg-soft-white text-primary px-8 py-4 rounded-lg font-bold uppercase hover:bg-brand-accent hover:text-soft-white transition-all shadow-xl text-lg"
+          >
+            <Search size={24} /> Ir al Catálogo Completo
+          </Link>
         </div>
       </section>
     </main>

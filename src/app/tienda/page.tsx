@@ -26,7 +26,7 @@ export default function Tienda() {
   return (
     <main className="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
       <header className="mb-16">
-        <h1 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-4">La Curaduría</h1>
+        <h1 className="font-poppins text-4xl md:text-5xl font-bold text-primary mb-4">La curaduría</h1>
         <p className="font-montserrat text-lg text-on-surface-variant max-w-2xl">
           Selección premium de equipo técnico y ropa de trabajo. Cada pieza es inspeccionada bajo nuestros estándares de durabilidad y funcionalidad.
         </p>
@@ -44,7 +44,7 @@ export default function Tienda() {
         {/* Sidebar Navigation & Filters */}
         <aside className={`${showMobileFilters ? "block" : "hidden"} md:block w-full md:w-64 flex-shrink-0 space-y-10 mb-10 md:mb-0`}>
           <section>
-            <h3 className="font-montserrat font-bold text-sm uppercase text-primary mb-6 tracking-widest">Categorías</h3>
+            <h3 className="font-montserrat font-bold text-sm uppercase text-primary mb-4 border-b border-outline-variant/30 pb-2">Filtrar por categoría</h3>
             <ul className="space-y-4">
               {["Refugio Essentials", "Refugio Trekking", "Refugio Workwear", "Mini Refugio", "Equipo de Ruta"].map(cat => (
                 <li key={cat}>
@@ -60,13 +60,13 @@ export default function Tienda() {
           </section>
 
           <section>
-            <h3 className="font-montserrat font-bold text-sm uppercase text-primary mb-6 tracking-widest">Estado (Status)</h3>
+            <h3 className="font-montserrat font-bold text-sm uppercase text-primary mb-4 border-b border-outline-variant/30 pb-2">Estado de la prenda</h3>
             <div className="space-y-3">
               {["10/10", "9/10", "8/10"].map((status) => (
                 <label key={status} className="flex items-center gap-3 cursor-pointer group">
                   <input 
                     type="checkbox" 
-                    className="w-4 h-4 border-primary text-burnt-orange focus:ring-burnt-orange rounded-none accent-burnt-orange"
+                    className="w-4 h-4 border-primary text-brand-accent focus:ring-brand-accent rounded-none accent-brand-accent"
                     checked={selectedStatus.includes(status)}
                     onChange={() => toggleStatus(status)}
                   />
@@ -79,8 +79,8 @@ export default function Tienda() {
           </section>
 
           <section className="p-6 bg-soft-white border border-outline-variant/30 rounded-lg">
-            <span className="material-symbols-outlined text-burnt-orange mb-2">straighten</span>
-            <h4 className="font-montserrat font-bold text-xs uppercase text-primary mb-2">Guía de Medidas</h4>
+            <span className="material-symbols-outlined text-brand-accent mb-2">straighten</span>
+            <h4 className="font-montserrat font-bold text-xs uppercase text-primary mb-2">Guía de medidas</h4>
             <p className="font-montserrat text-[13px] text-on-surface-variant leading-relaxed">
               Todas nuestras prendas incluyen medidas exactas en cm (axila a axila y largo total) para asegurar un calce perfecto.
             </p>
@@ -89,7 +89,7 @@ export default function Tienda() {
 
         {/* Product Grid */}
         <div className="flex-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-gutter">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-16 gap-x-12">
             {filteredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

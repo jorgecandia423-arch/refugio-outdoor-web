@@ -10,6 +10,20 @@ export interface Product {
   status: string; // "10/10", "9/10"
   size: string;
   category?: string;
+  images?: string[];
+  features?: string[];
+  gender?: 'Hombre' | 'Mujer' | 'Unisex';
+  description?: string;
+  brandInfo?: string;
+  authenticityCode?: string;
+  sku?: string;
+  costPrice?: number;
+  washCost?: number;
+  packCost?: number;
+  soldAt?: string;
+  soldPrice?: number;
+  soldChannel?: string;
+  soldMethod?: string;
 }
 
 interface CartState {

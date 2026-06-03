@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, ShoppingCart, X } from "lucide-react";
 import Cart from "./Cart";
@@ -16,31 +17,31 @@ export default function Navbar() {
     <>
       <header className="bg-kraft-beige/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
-        <Link href="/" className="font-poppins text-2xl font-semibold text-primary tracking-tight">
-          Refugio Outdoor
+        <Link href="/" className="flex items-center">
+          <Image src="/logo.png" alt="Refugio Outdoor" width={180} height={60} className="object-contain" />
         </Link>
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-burnt-orange transition-colors duration-200">
-            Lo Nuevo
+          <Link href="/" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-brand-accent transition-colors duration-200">
+            Lo nuevo
           </Link>
-          <Link href="/tienda" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-burnt-orange transition-colors duration-200">
+          <Link href="/tienda" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-brand-accent transition-colors duration-200">
             Tienda
           </Link>
-          <Link href="/marcas" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-burnt-orange transition-colors duration-200">
+          <Link href="/marcas" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-brand-accent transition-colors duration-200">
             Marcas
           </Link>
-          <Link href="/contacto" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-burnt-orange transition-colors duration-200">
+          <Link href="/contacto" className="font-montserrat font-bold text-sm uppercase text-on-surface-variant hover:text-brand-accent transition-colors duration-200">
             Contacto
           </Link>
         </nav>
         <div className="flex items-center gap-4">
           <button 
-            className="p-2 text-primary hover:text-burnt-orange transition-all duration-300 relative"
+            className="p-2 text-primary hover:text-brand-accent transition-all duration-300 relative"
             onClick={() => setIsCartOpen(true)}
           >
             <ShoppingCart size={24} />
             {cartItems.length > 0 && (
-              <span className="absolute top-0 right-0 bg-burnt-orange text-soft-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+              <span className="absolute top-0 right-0 bg-brand-accent text-soft-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                 {cartItems.length}
               </span>
             )}
@@ -57,7 +58,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-20 left-0 w-full bg-kraft-beige border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-4 shadow-lg">
-          <Link href="/" className="font-montserrat font-bold text-base uppercase text-primary border-b border-outline-variant/20 pb-2">Lo Nuevo</Link>
+          <Link href="/" className="font-montserrat font-bold text-base uppercase text-primary border-b border-outline-variant/20 pb-2">Lo nuevo</Link>
           <Link href="/tienda" className="font-montserrat font-bold text-base uppercase text-primary border-b border-outline-variant/20 pb-2">Tienda</Link>
           <Link href="/marcas" className="font-montserrat font-bold text-base uppercase text-primary border-b border-outline-variant/20 pb-2">Marcas</Link>
           <Link href="/contacto" className="font-montserrat font-bold text-base uppercase text-primary pb-2">Contacto</Link>

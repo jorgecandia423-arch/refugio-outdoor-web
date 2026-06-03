@@ -37,8 +37,8 @@ export default function Cart({ isOpen, onClose }: CartProps) {
       <div className="fixed inset-0 bg-black/50 z-[60] backdrop-blur-sm transition-opacity" onClick={onClose} />
       <div className="fixed top-0 right-0 h-full w-full max-w-lg bg-kraft-beige z-[70] shadow-2xl flex flex-col transform transition-transform duration-300">
         <div className="p-6 border-b border-outline-variant/30 flex justify-between items-center bg-surface">
-          <h2 className="font-poppins text-2xl font-semibold text-primary">Tu Refugio (Carrito)</h2>
-          <button onClick={onClose} className="p-2 text-on-surface-variant hover:text-burnt-orange transition-colors">
+          <h2 className="font-poppins text-2xl font-semibold text-primary">Tu refugio (carrito)</h2>
+          <button onClick={onClose} className="p-2 text-on-surface-variant hover:text-brand-accent transition-colors">
             <X size={24} />
           </button>
         </div>
@@ -58,7 +58,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                 <div className="flex-1 flex flex-col justify-between">
                   <div className="flex justify-between items-start">
                     <div>
-                      <span className="font-montserrat text-xs uppercase font-bold text-burnt-orange">{item.brand}</span>
+                      <span className="font-montserrat text-xs uppercase font-bold text-brand-accent">{item.brand}</span>
                       <h4 className="font-poppins font-semibold text-primary text-base leading-tight mt-1">{item.name}</h4>
                     </div>
                     <button onClick={() => removeItem(item.id)} className="text-outline hover:text-error transition-colors p-1">
@@ -86,7 +86,7 @@ export default function Cart({ isOpen, onClose }: CartProps) {
               onClick={handleCheckout}
               className="w-full bg-primary text-soft-white font-montserrat font-bold text-sm uppercase py-4 hover:bg-burnt-orange transition-colors flex items-center justify-center gap-2"
             >
-              Cerrar Compra vía WhatsApp
+              Cerrar compra vía WhatsApp
             </button>
           </div>
         )}

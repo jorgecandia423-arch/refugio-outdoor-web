@@ -9,16 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#F5EFE6", // kraft-beige
-        surface: "#fcf9f8",
-        "surface-container": "#f0eded",
+        background: "#FAFAFA", // Clean off-white
+        surface: "#FFFFFF", // Pure white
+        "surface-container": "#F4F4F5", // Light gray
+
         "surface-variant": "#e5e2e1",
-        primary: "#173124", // primary dark green
-        "primary-container": "#2d4739", // Forest Green
+        primary: "#2d2d21", // Dark Olive Charcoal
+        "primary-container": "#3C3D32", // Dark Olive Lighter
         secondary: "#685d4b", // Earth Brown
         "secondary-container": "#eddec7",
-        "burnt-orange": "#D1603D", // Burnt Orange
-        "kraft-beige": "#F5EFE6", // Kraft Beige
+        "brand-accent": "#868c1f", // Bright Olive Chartreuse
+        "kraft-beige": "#e3dcbf", // Kraft Beige
         "soft-white": "#FDFDFD",
         "on-surface": "#1b1c1c",
         "on-surface-variant": "#424844",

@@ -4,7 +4,8 @@
 
 @layer base {
   body {
-    @apply bg-background text-on-surface antialiased;
+    @apply text-on-surface antialiased;
+    background-color: #FAFAFA !important;
   }
 }
 

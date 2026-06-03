@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </Link>
-        <div className="absolute top-4 left-4 bg-burnt-orange text-white px-3 py-1 font-montserrat font-bold text-[10px] uppercase tracking-widest z-10 pointer-events-none">
+        <div className="absolute top-4 left-4 bg-primary text-soft-white px-3 py-1.5 font-montserrat font-bold text-[10px] uppercase tracking-widest z-10 pointer-events-none shadow-md border border-white/10">
           {product.brand}
         </div>
         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary px-3 py-1 font-montserrat font-bold text-[10px] uppercase border border-outline-variant/50 z-10 pointer-events-none">
