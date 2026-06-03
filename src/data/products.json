@@ -1,0 +1,190 @@
+[
+  {
+    "id": "1",
+    "name": "Detroit Jacket Vintage",
+    "brand": "Carhartt",
+    "price": 850,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCbQV0cihQnJU6JMiLzT8vwnxvCDF7CURQoAlDgUY5HviaJfPsUFEY7WsNvqCrAbHylLQ-3Eo9uU6ur98-IThKDOoAFMKg2Hmx3A8vCY05TVsdqYD_RuHk9WciTxZkpizjvK_EKf94kKzqGsDJ7Noa9lzWeQrAW28eqFRO-6fJuzCyJw-Iio1s4Z8zubGDceRE3LJ_K1il9BCiwvMM-d3gQ-ojX70L4RPO7wpBADkdrNs7v0oAUzx8dKebDT6MnMTUj0zG0MWbZwYw",
+    "status": "10/10",
+    "size": "58cm x 65cm",
+    "category": "Refugio Workwear",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCbQV0cihQnJU6JMiLzT8vwnxvCDF7CURQoAlDgUY5HviaJfPsUFEY7WsNvqCrAbHylLQ-3Eo9uU6ur98-IThKDOoAFMKg2Hmx3A8vCY05TVsdqYD_RuHk9WciTxZkpizjvK_EKf94kKzqGsDJ7Noa9lzWeQrAW28eqFRO-6fJuzCyJw-Iio1s4Z8zubGDceRE3LJ_K1il9BCiwvMM-d3gQ-ojX70L4RPO7wpBADkdrNs7v0oAUzx8dKebDT6MnMTUj0zG0MWbZwYw"
+    ],
+    "features": ["Resistente al agua", "Cortaviento", "Ideal para climas fríos", "Ligera y cómoda"],
+    "gender": "Unisex",
+    "description": "Una de las piezas más icónicas del workwear mundial. La Detroit Jacket de Carhartt ofrece durabilidad inigualable gracias a su lona gruesa y un forro interno tipo manta que mantiene el calor en temperaturas hostiles.",
+    "brandInfo": "Fundada en 1889 en Detroit, Michigan, Carhartt comenzó fabricando ropa de trabajo para obreros ferroviarios. Hoy es el estándar de oro en prendas ultra-duraderas.",
+    "authenticityCode": "RN14806"
+  },
+  {
+    "id": "2",
+    "name": "R1 Fleece Pullover",
+    "brand": "Patagonia",
+    "price": 620,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlcEVrOhSc_A5BES9NLxGGELaeWG7FeCo-LMP5TpslRSWlyryAR8Mlgowko24mW4ng46YZXZg_WpDhbL_dQyXbGrQ8pf86T5vtruxtR7BVwVFSzJIWDUSjVBb5QW7l-u_QznEnxvScxPrqskixpWj_lZmL4WTTqmeRfksFH0VBq-B4UEMEYEYS37HGR_doRLDenMy-sI9C4Z0U1IV-nurrpIxHz_GIquJrlKPbZdPFVqUqmjRR51ULvW7pwecTToZxh0I8FJ8YheQ",
+    "status": "9/10",
+    "size": "54cm x 70cm",
+    "category": "Refugio Trekking",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBlcEVrOhSc_A5BES9NLxGGELaeWG7FeCo-LMP5TpslRSWlyryAR8Mlgowko24mW4ng46YZXZg_WpDhbL_dQyXbGrQ8pf86T5vtruxtR7BVwVFSzJIWDUSjVBb5QW7l-u_QznEnxvScxPrqskixpWj_lZmL4WTTqmeRfksFH0VBq-B4UEMEYEYS37HGR_doRLDenMy-sI9C4Z0U1IV-nurrpIxHz_GIquJrlKPbZdPFVqUqmjRR51ULvW7pwecTToZxh0I8FJ8YheQ"
+    ],
+    "features": ["Resistente al agua", "Cortaviento", "Ideal para climas fríos", "Ligera y cómoda"],
+    "gender": "Hombre",
+    "description": "Capa intermedia clásica para montañismo. El R1 utiliza tejido Polartec Power Grid que atrapa el calor mientras permite una transpirabilidad extrema durante actividades intensas.",
+    "brandInfo": "Patagonia es el líder indiscutible en sustentabilidad y equipo outdoor. Sus prendas están construidas bajo el concepto 'Worn Wear', diseñadas para durar décadas.",
+    "authenticityCode": "STY40109-SP19"
+  },
+  {
+    "id": "3",
+    "name": "Double Knee Pant",
+    "brand": "Carhartt",
+    "price": 780,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCUkefEtdyGHLTplylvm611ujyfQ7rMeh04N1dqo95Hk8KgLtiBFiciQAl4xeoFoxzCN3lO37EACpTCAvDkV6ysULl-dPf2IwVwXAhdbZUezS8AWzWKSrEHtx7aUoCxCc59YUditJdah5Fn7-30oJp9Yz6xhcP_GgTQlDXeEaMFa4TDa6rDrVdFGlxBmzaq4PYTqAYyD41Tsjfhga7t634dG4PfFtaahnfSEZvDjZ0rZsuqzl6KGSbKrytMdAU36e7QfNbQV4uaLBQ",
+    "status": "10/10",
+    "size": "34W x 32L",
+    "category": "Refugio Workwear",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCUkefEtdyGHLTplylvm611ujyfQ7rMeh04N1dqo95Hk8KgLtiBFiciQAl4xeoFoxzCN3lO37EACpTCAvDkV6ysULl-dPf2IwVwXAhdbZUezS8AWzWKSrEHtx7aUoCxCc59YUditJdah5Fn7-30oJp9Yz6xhcP_GgTQlDXeEaMFa4TDa6rDrVdFGlxBmzaq4PYTqAYyD41Tsjfhga7t634dG4PfFtaahnfSEZvDjZ0rZsuqzl6KGSbKrytMdAU36e7QfNbQV4uaLBQ"
+    ],
+    "features": ["Cortaviento", "Ideal para climas fríos", "Ligera y cómoda"],
+    "gender": "Hombre",
+    "description": "Pantalón de trabajo reforzado con doble capa en la rodilla, diseñado para resistir la abrasión en terrenos difíciles o trabajo duro diario.",
+    "brandInfo": "El compromiso de Carhartt con la calidad de sus tejidos de lona lo ha hecho el favorito no solo de trabajadores, sino de exploradores urbanos."
+  },
+  {
+    "id": "4",
+    "name": "Board Shirt Virgin Wool",
+    "brand": "Pendleton",
+    "price": 550,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQrJEJ922XGAuT4iW9u6_g3tcY1VH77l_Uoh_T62xMjQiDCphrZZ1ykk4nK8eeKxzG6L3l8Anv-swWY6eCRoWLNX_C0oh-J9wx-FbF1mslF-flGMeCBBNKjtN4CUzW2g3DZn88cjIBRZlBFlYRTc0VT8sdttS9zbR4okhsktd5-_etB-BQ5tzrUs4evROCpS8hEDgYKJ9qiKTMRBgDD6XpYmy7qCV3Z4DD3tXbQ00BkJihO98pobeR0RR1vQpCicFoMNXBtIkYptE",
+    "status": "9/10",
+    "size": "56cm x 72cm",
+    "category": "Refugio Essentials",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBQrJEJ922XGAuT4iW9u6_g3tcY1VH77l_Uoh_T62xMjQiDCphrZZ1ykk4nK8eeKxzG6L3l8Anv-swWY6eCRoWLNX_C0oh-J9wx-FbF1mslF-flGMeCBBNKjtN4CUzW2g3DZn88cjIBRZlBFlYRTc0VT8sdttS9zbR4okhsktd5-_etB-BQ5tzrUs4evROCpS8hEDgYKJ9qiKTMRBgDD6XpYmy7qCV3Z4DD3tXbQ00BkJihO98pobeR0RR1vQpCicFoMNXBtIkYptE"
+    ],
+    "features": ["Cortaviento", "Ideal para climas fríos"],
+    "gender": "Hombre",
+    "description": "Camisa tejida con lana virgen 100%. Naturalmente resistente al agua, a los olores y regula la temperatura de manera excepcional.",
+    "brandInfo": "Pendleton es una marca patrimonial estadounidense, tejiendo lanas de calidad mundial en Oregón por más de 100 años."
+  },
+  {
+    "id": "5",
+    "name": "Street Creek 24L",
+    "brand": "Black Diamond",
+    "price": 920,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWTlyHBO4gvTxJ5VkzZm-b3I297Yl3_HrkrvZCMmR-jzgG99rOssCvvDKO1hMxvuhXxFV_pCUio5ujqEknAmCkCXUiYQsha8rZ6GuBwKSpGXXnnhnZ2WpIo1c57CoABNxQcFcF__imVDwP5glEOchQzezJgyoRcVe2VC3u_Gc10IrjDGtlTortMwUoZ5VA-7oSq1qZFzFkezeQ-qQei1hlkzTuzcmcniMfZW5rctOYbIeCYsNEzm4n7Ip0UkrWqKW6Rn3VY_SLYBI",
+    "status": "10/10",
+    "size": "24L",
+    "category": "Equipo de Ruta",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDWTlyHBO4gvTxJ5VkzZm-b3I297Yl3_HrkrvZCMmR-jzgG99rOssCvvDKO1hMxvuhXxFV_pCUio5ujqEknAmCkCXUiYQsha8rZ6GuBwKSpGXXnnhnZ2WpIo1c57CoABNxQcFcF__imVDwP5glEOchQzezJgyoRcVe2VC3u_Gc10IrjDGtlTortMwUoZ5VA-7oSq1qZFzFkezeQ-qQei1hlkzTuzcmcniMfZW5rctOYbIeCYsNEzm4n7Ip0UkrWqKW6Rn3VY_SLYBI"
+    ],
+    "features": ["Resistente al agua", "Ligera y cómoda"],
+    "gender": "Unisex",
+    "description": "Mochila híbrida que combina la resistencia de los 'haul bags' de escalada de Black Diamond con las características prácticas urbanas.",
+    "brandInfo": "Nacida de la necesidad de equipo de escalada confiable, Black Diamond diseña equipo técnico de precisión para los deportes más demandantes."
+  },
+  {
+    "id": "6",
+    "name": "Thorium AR Vest",
+    "brand": "Arc'teryx",
+    "price": 1150,
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAHVjWgwjFGoHHFeNzXU1JJN5nfuZM_ekWvjHRTX8rbuU6AnRKZgCoE2kCezja51EiJL1upO-4BCAq9Udikc6QgoU_YkOFeOCTguOTaf_nxAwMpXF7NpLs5_5M_iP4V6tmWlXFD-hf206qDUeBDO-apBfDA9ic6r9DN7HOIZERSCmP6s3t6r2ne56VZ-bOguwCZRyTbpZ6NN6EuFjTxRWMaJG9r3o4um-rblujKa_g9bqTuW-El4UmKGpHsnTWBctkc4otEdCvkCWk",
+    "status": "8/10",
+    "size": "52cm x 68cm",
+    "category": "Refugio Trekking",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAHVjWgwjFGoHHFeNzXU1JJN5nfuZM_ekWvjHRTX8rbuU6AnRKZgCoE2kCezja51EiJL1upO-4BCAq9Udikc6QgoU_YkOFeOCTguOTaf_nxAwMpXF7NpLs5_5M_iP4V6tmWlXFD-hf206qDUeBDO-apBfDA9ic6r9DN7HOIZERSCmP6s3t6r2ne56VZ-bOguwCZRyTbpZ6NN6EuFjTxRWMaJG9r3o4um-rblujKa_g9bqTuW-El4UmKGpHsnTWBctkc4otEdCvkCWk"
+    ],
+    "features": ["Resistente al agua", "Cortaviento", "Ideal para climas fríos", "Ligera y cómoda"],
+    "gender": "Mujer",
+    "description": "Chaleco insulado versátil, ideal para clima frío y seco. Su exterior repele el agua leve, mientras el plumón mantiene tu núcleo caliente.",
+    "brandInfo": "Arc'teryx (basada en las montañas canadienses) es reconocida por su innovación obsesiva en diseño y materiales Gore-Tex."
+  },
+  {
+    "id": "7",
+    "name": "Retro-X Fleece Vest",
+    "brand": "Patagonia",
+    "price": 890,
+    "image": "/fleece_vest.png",
+    "status": "10/10",
+    "size": "56cm x 69cm",
+    "category": "Refugio Essentials",
+    "images": [
+      "/fleece_vest.png"
+    ],
+    "features": ["Cortaviento", "Ideal para climas fríos"],
+    "gender": "Unisex",
+    "description": "Una pieza icónica de la cultura outdoor. Su gruesa piel de oveja sintética exterior bloquea el viento, mientras que el forro interior absorbe la humedad.",
+    "brandInfo": "Patagonia es líder mundial en activismo corporativo y en crear productos duraderos diseñados para ser reparados.",
+    "authenticityCode": "STY23048",
+    "costPrice": 400,
+    "washCost": 15,
+    "packCost": 5
+  },
+  {
+    "id": "8",
+    "name": "Mountain Light Boots",
+    "brand": "Danner",
+    "price": 1450,
+    "image": "/hiking_boots.png",
+    "status": "9/10",
+    "size": "42 EU | 9 US",
+    "category": "Equipo de Ruta",
+    "images": [
+      "/hiking_boots.png"
+    ],
+    "features": ["Resistente al agua", "Ideal para climas fríos", "Suela Vibram"],
+    "gender": "Hombre",
+    "description": "Botas clásicas de senderismo fabricadas a mano en Portland. Construcción de cuero de grano entero con forro GORE-TEX 100% impermeable y transpirable.",
+    "brandInfo": "Desde 1932, Danner ha estado creando botas con propósito e integridad para aventureros y trabajadores.",
+    "authenticityCode": "31530-DAN",
+    "costPrice": 750,
+    "washCost": 30,
+    "packCost": 10
+  },
+  {
+    "id": "9",
+    "name": "Beta AR Jacket",
+    "brand": "Arc'teryx",
+    "price": 2800,
+    "image": "/goretex_jacket.png",
+    "status": "10/10",
+    "size": "58cm x 75cm",
+    "category": "Refugio Trekking",
+    "images": [
+      "/goretex_jacket.png"
+    ],
+    "features": ["Resistente al agua", "Cortaviento", "GORE-TEX Pro", "Ligera y cómoda"],
+    "gender": "Unisex",
+    "description": "La Beta AR es la chaqueta 'All Round' definitiva. Construida con GORE-TEX Pro Most Rugged, ofrece protección contra tormentas imbatible en cualquier terreno alpino.",
+    "brandInfo": "Nacida en la dura cordillera costera canadiense, Arc'teryx se centra en la ingeniería implacable y el diseño minimalista funcional.",
+    "authenticityCode": "AR-BETA-784",
+    "costPrice": 1200,
+    "washCost": 20,
+    "packCost": 5
+  },
+  {
+    "id": "10",
+    "name": "Kånken No. 2",
+    "brand": "Fjällräven",
+    "price": 750,
+    "image": "/camping_backpack.png",
+    "status": "9/10",
+    "size": "16L",
+    "category": "Mini Refugio",
+    "images": [
+      "/camping_backpack.png"
+    ],
+    "features": ["Resistente al agua", "G-1000 HeavyDuty", "Detalles en cuero"],
+    "gender": "Unisex",
+    "description": "Una versión premium de la icónica mochila Kånken, fabricada con G-1000 HeavyDuty Eco y refinada con detalles en cuero 100% genuino.",
+    "brandInfo": "Procedente del pequeño pueblo sueco de Örnsköldsvik, Fjällräven tiene la misión de hacer la naturaleza más accesible desarrollando equipos duraderos y atemporales.",
+    "authenticityCode": "F23565",
+    "costPrice": 350,
+    "washCost": 10,
+    "packCost": 5
+  }
+]
