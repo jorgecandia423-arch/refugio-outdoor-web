@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="bg-primary text-soft-white mt-auto">
       <div className="w-full py-20 px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
         <div className="md:col-span-1">
-          <div className="mb-6 bg-kraft-beige p-4 rounded-lg inline-block shadow-lg">
-            <Image src="/logo.png" alt="Refugio Outdoor" width={180} height={60} className="object-contain" />
+          <div className="mb-6 inline-block">
+            <Image src="/logo-dark.png" alt="Refugio Outdoor" width={180} height={60} className="object-contain" />
           </div>
           <p className="font-montserrat text-base text-on-primary-container/80 mb-6">
             Curaduría con propósito para el explorador consciente.
